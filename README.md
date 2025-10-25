@@ -47,7 +47,16 @@ Import NPCs from [narutogen.netlify.app](https://narutogen.netlify.app/) directl
 
 ### Step 2: Import into Foundry
 
-#### Option A: Using the Dialog (Recommended)
+#### Option A: Create a Macro
+
+1. Create a new Script Macro in Foundry
+2. Paste this code:
+```javascript
+showNarutoImporterDialog();
+```
+3. Save and run the macro whenever you want to import NPCs
+
+#### Option B: Using the Dialog (Recommended)
 
 1. Open your Foundry VTT game
 2. Open the macro directory or run this command in the console:
@@ -61,7 +70,7 @@ Import NPCs from [narutogen.netlify.app](https://narutogen.netlify.app/) directl
 5. Click "Import NPC"
 6. The NPC will be created and its character sheet will open automatically
 
-#### Option B: Using Console
+#### Option C: Using Console
 
 ```javascript
 // Paste your NPC JSON data
@@ -74,15 +83,6 @@ const npcData = {
 // Import the NPC
 await narutoImporter.importNPC(npcData);
 ```
-
-#### Option C: Create a Macro
-
-1. Create a new Script Macro in Foundry
-2. Paste this code:
-```javascript
-showNarutoImporterDialog();
-```
-3. Save and run the macro whenever you want to import NPCs
 
 ## Sample Import
 
@@ -199,50 +199,11 @@ naruto-npc-importer/
 └── README.md               # This file
 ```
 
-### Testing
-
-1. Create a test world with the Naruto 5e system
-2. Enable the module
-3. Use the sample JSON provided in this README
-4. Verify all data imports correctly
-
-## Known Issues
-
-- Some jutsu effects may need manual adjustment depending on complexity
-- Weapon range parsing assumes standard format (e.g., "60/120")
-- Image paths need to be configured for your specific setup
-
-## Changelog
-
-### Version 1.0.0 (Initial Release)
-- Basic NPC import functionality
-- Support for stats, jutsu, weapons, and abilities
-- User-friendly dialog interface
-- JSON file and paste support
 
 ## Credits
 
 - Based on NPCs from [narutogen.netlify.app](https://narutogen.netlify.app/)
 - Built for the Naruto 5e system on Foundry VTT
 
-## License
-
-[Add your chosen license here - MIT recommended]
-
-## Support
-
-For issues, questions, or contributions:
-- GitHub Issues: [Your GitHub Issues URL]
-- Discord: [Your Discord Server/Tag]
-
-## Contributing
-
-Contributions are welcome! Please:
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Submit a pull request
-
----
 
 **Note**: This module is not affiliated with or endorsed by narutogen.netlify.app or the Naruto 5e system creators. It's a community tool to help GMs quickly import NPCs into their games.
