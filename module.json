@@ -34,12 +34,14 @@
       "path": "lang/en.json"
     }
   ],
-  "url": "https://github.com/yourusername/naruto-npc-importer",
-  "manifest": "https://github.com/yourusername/naruto-npc-importer/releases/latest/download/module.json",
-  "download": "https://github.com/yourusername/naruto-npc-importer/releases/latest/download/naruto-npc-importer.zip",
-  "license": "LICENSE",
-  "readme": "README.md",
-  "bugs": "https://github.com/yourusername/naruto-npc-importer/issues",
+  "url": "https://github.com/Randme/Naruto-5e-Adversary-Importer",
+  "readme": "https://github.com/Randme/Naruto-5e-Adversary-Importer#readme",
+  "license": "https://github.com/Randme/Naruto-5e-Adversary-Importer/blob/main/LICENSE",
+  "bugs": "https://github.com/Randme/Naruto-5e-Adversary-Importer/issues",
+
+  "manifest": "https://github.com/Randme/Naruto-5e-Adversary-Importer/releases/latest/download/module.json",
+  "download": "https://github.com/Randme/Naruto-5e-Adversary-Importer/releases/download/v1.0.0/naruto-5e-adversary-importer-v1.0.0.zip",
+
   "flags": {
     "hotReload": {
       "extensions": ["js", "html"],
