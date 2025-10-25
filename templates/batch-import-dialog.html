@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<div class="naruto-batch-importer-dialog">
+  <div class="batch-import-section">
+    <h2>Batch Import NPCs</h2>
+    <p>Import multiple NPCs at once from a JSON file containing an array of NPC data.</p>
+    
+    <div class="file-upload">
+      <label for="batch-file-input">Select JSON File:</label>
+      <input type="file" id="batch-file-input" accept=".json" />
+      <p class="hint">Expected format: Array of NPC objects or single NPC object</p>
+    </div>
+
+    <div class="import-options">
+      <h3>Import Options</h3>
+      
+      <div class="option">
+        <input type="checkbox" id="create-folder" checked />
+        <label for="create-folder">Create folder for imported NPCs</label>
+      </div>
+
+      <div class="option">
+        <label for="folder-name">Folder Name:</label>
+        <input type="text" id="folder-name" value="Imported NPCs" placeholder="Folder name..." />
+      </div>
+
+      <div class="option">
+        <input type="checkbox" id="skip-existing" checked />
+        <label for="skip-existing">Skip NPCs that already exist</label>
+      </div>
+    </div>
+  </div>
+
+  <div class="batch-button-section">
+    <button id="start-batch-import" type="button" disabled>
+      <i class="fas fa-file-import"></i> Start Batch Import
+    </button>
+    <button id="cancel-batch" type="button">
+      <i class="fas fa-times"></i> Cancel
+    </button>
+  </div>
+</div>
+
+<style>
+.naruto-batch-importer-dialog {
+  padding: 15px;
+}
+
+.batch-import-section {
+  margin-bottom: 20px;
+}
+
+.batch-import-section h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+.batch-import-section > p {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.file-upload {
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 2px dashed #ccc;
+  border-radius: 5px;
+  background: #f9f9f9;
+}
+
+.file-upload label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #333;
+}
+
+.file-upload input[type="file"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.file-upload .hint {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #888;
+  font-style: italic;
+}
+
+.import-options {
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #fff;
+}
+
+.import-options h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+.import-options .option {
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.import-options .option input[type="checkbox"] {
+  width: auto;
+  margin: 0;
+}
+
+.import-options .option input[type="text"] {
+  flex: 1;
+  padding: 6px 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.import-options .option label {
+  color: #333;
+  margin: 0;
+}
+
+.batch-button-section {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding-top: 15px;
+  border-top: 1px solid #ccc;
+}
+
+.batch-button-section button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#start-batch-import {
+  background: #27ae60;
+  color: white;
+}
+
+#start-batch-import:hover:not(:disabled) {
+  background: #229954;
+}
+
+#start-batch-import:disabled {
+  background: #bdc3c7;
+  cursor: not-allowed;
+}
+
+#cancel-batch {
+  background: #95a5a6;
+  color: white;
+}
+
+#cancel-batch:hover {
+  background: #7f8c8d;
+}
+</style>

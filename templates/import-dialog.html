@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<div class="naruto-importer-dialog">
+  <div class="import-section">
+    <h2>Import NPC Data</h2>
+    
+    <div class="import-method">
+      <h3>Method 1: Upload JSON File</h3>
+      <input type="file" id="npc-file-input" accept=".json" />
+    </div>
+
+    <div class="import-method">
+      <h3>Method 2: Paste JSON</h3>
+      <textarea 
+        id="json-input" 
+        placeholder="Paste your NPC JSON here..."
+        rows="10"
+        style="width: 100%; font-family: monospace; padding: 8px;"
+      ></textarea>
+      <button id="import-from-json" type="button">Load JSON</button>
+    </div>
+  </div>
+
+  <div class="preview-section">
+    <h3>Preview</h3>
+    <div id="npc-preview" class="npc-preview">
+      <p class="placeholder">No NPC loaded. Upload a file or paste JSON data above.</p>
+    </div>
+  </div>
+
+  <div class="button-section">
+    <button id="import-npc" type="button" disabled>
+      <i class="fas fa-download"></i> Import NPC
+    </button>
+    <button id="cancel-import" type="button">
+      <i class="fas fa-times"></i> Cancel
+    </button>
+  </div>
+</div>
+
+<style>
+.naruto-importer-dialog {
+  padding: 15px;
+}
+
+.import-section {
+  margin-bottom: 20px;
+}
+
+.import-method {
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #f9f9f9;
+}
+
+.import-method h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+#npc-file-input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+#import-from-json {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#import-from-json:hover {
+  background: #45a049;
+}
+
+.preview-section {
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #fff;
+}
+
+.preview-section h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.npc-preview {
+  min-height: 150px;
+}
+
+.npc-preview .placeholder {
+  color: #999;
+  font-style: italic;
+  text-align: center;
+  padding: 40px;
+}
+
+.npc-preview-content {
+  padding: 10px;
+}
+
+.npc-preview-content h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #2c3e50;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 10px;
+}
+
+.preview-details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.preview-details p {
+  margin: 5px 0;
+  padding: 5px;
+  background: #f0f0f0;
+  border-radius: 3px;
+}
+
+.preview-details strong {
+  color: #2c3e50;
+}
+
+.button-section {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding-top: 15px;
+  border-top: 1px solid #ccc;
+}
+
+.button-section button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#import-npc {
+  background: #3498db;
+  color: white;
+}
+
+#import-npc:hover:not(:disabled) {
+  background: #2980b9;
+}
+
+#import-npc:disabled {
+  background: #bdc3c7;
+  cursor: not-allowed;
+}
+
+#cancel-import {
+  background: #95a5a6;
+  color: white;
+}
+
+#cancel-import:hover {
+  background: #7f8c8d;
+}
+</style>

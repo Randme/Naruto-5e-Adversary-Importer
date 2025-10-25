@@ -1,0 +1,32 @@
+{
+  "NARUTO_IMPORTER": {
+    "Title": "Naruto NPC Importer",
+    "ImportButton": "Import NPC",
+    "CancelButton": "Cancel",
+    "LoadJSON": "Load JSON",
+    "Method1": "Method 1: Upload JSON File",
+    "Method2": "Method 2: Paste JSON",
+    "Preview": "Preview",
+    "NoDataLoaded": "No NPC loaded. Upload a file or paste JSON data above.",
+    
+    "Notifications": {
+      "Success": "Successfully imported {name}",
+      "Error": "Failed to import NPC: {error}",
+      "InvalidJSON": "Invalid JSON format",
+      "NoData": "No NPC data loaded",
+      "DataLoaded": "NPC data loaded successfully"
+    },
+    
+    "Labels": {
+      "Name": "Name",
+      "Clan": "Clan",
+      "Rank": "Rank",
+      "CR": "CR",
+      "HP": "HP",
+      "Chakra": "Chakra",
+      "AC": "AC",
+      "Jutsu": "Jutsu",
+      "Weapons": "Weapons"
+    }
+  }
+}
